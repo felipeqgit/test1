@@ -1,0 +1,226 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 2560px;
+}
+
+:root {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    font-size: 21px;
+}
+
+header {
+    padding: 10px 16px;
+    width: 320px;
+}
+
+.menu-desktop {
+    display: none;
+}
+
+#burger-menu {
+    display: none;
+}
+
+.burger-menu {
+    position: relative;
+    float: right;
+}
+
+.menu-mobile ul {
+    list-style-type: none;
+    width: 100vw;
+    top: 50px;
+    position: fixed;
+    transform: translateX(1500px);
+    transition: all 2s ease;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+input[type="checkbox"]:checked + .menu-mobile ul {
+    transform: translateX(90px);
+}
+
+.menu-mobile li {
+    width: 100vw;
+    height: 40px;
+    background: linear-gradient(to right, rgb(1, 14, 126), rgb(85, 109, 216));
+}
+
+.menu-mobile a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.5s linear;
+}
+
+.menu-mobile a:hover {
+    color: black;
+}
+
+.main-title {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 39px;
+    font-weight: 600;
+    padding: 0 16px;
+}
+
+.main-title .em-1 {
+    text-decoration: line-through;
+    font-style: normal;
+}
+
+.section-1 p {
+    width: 100vw;
+    padding: 0 16px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.section-1 .p2 {
+    display: none;
+}
+
+.section-1 .button {
+    width: 288px;
+    height: 48px;
+    background-color: #00f3bb;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.clip {
+    width: 100vw;
+    height: 1203.5px;
+    background: linear-gradient(to bottom,  #0000ff, #0000A3);
+    clip-path: polygon(100% 0, 100% 98%, 0 100%, 0 2%);
+}
+
+.section-2 h2 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+    padding-top: 64px;
+    margin-left: 16px;
+}
+
+.section-2 .iframe {
+    padding-top: 21px;
+    margin-left: 11px;
+    width: 298px;    
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    header {
+        height: 80px;
+        padding: 22px 100px;
+        width: 100vw;
+    }
+
+    .logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-desktop {
+        margin-top: 4px;
+        width: 40%;
+        display: block;
+        position: relative;
+        float: right;
+    }
+
+    .menu-desktop ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-desktop a {
+        text-decoration: none;
+        color: black;
+        transition: color 0.5s linear;
+    }
+
+    .menu-desktop a:hover {
+        color: blue;
+    }
+    
+    .burger-menu{
+        display: none;
+    }
+
+    .main-title {
+        padding-left: 200px;
+        font-size: 64px;
+        font-weight: 600;
+    }
+
+    .main-title .em-2 {
+        color: blue;
+        font-style: normal;
+    }
+
+    .section-1 .p1 {
+        display: none;
+    }
+
+    .section-1 p {
+        padding-left: 200px;
+        padding-right: 0;
+        font-size: 16px;
+        width: 820px;
+        margin-top: 0px;
+        margin-bottom: 56px;
+    }
+
+    .section-1 .p2 {
+        display: block;
+        text-align: justify;
+    }
+
+    .section-1 .button {
+        width: 226px;
+        height: 56px;
+        margin: 0;
+        margin-left: 200px;
+        margin-bottom: 5px;
+        text-align: center;
+        display: flex;
+    }
+
+    .clip {
+        height: 1042.6px;
+        background: linear-gradient(to left,  #0000ff, #0000A3);
+        clip-path: polygon(100% 0, 100% 88%, 0 100%, 0 12%);
+    }
+
+    .section-2 h2 {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 48px;
+        padding-top: 186px;
+        margin-left: 200px;
+    }
+    
+    /*
+    Seguir con flex o algo para ubicar de a 2 iframes en fila
+    .section-2 .iframe {
+        padding-top: 26px;
+        margin-left: 0px;
+        width: 584px;    
+    }
+    */
+}
+
