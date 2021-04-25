@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;500&family=IBM+Plex+Sans:wght@300;500&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,8 +14,8 @@
 }
 
 header {
-    padding: 10px 16px;
-    width: 320px;
+    padding: 21px 5vw 29px;
+    width: 100vw;
 }
 
 .menu-desktop {
@@ -21,6 +23,10 @@ header {
 }
 
 #burger-menu {
+    display: none;
+}
+
+.burger-menu-cross {
     display: none;
 }
 
@@ -33,21 +39,30 @@ header {
     list-style-type: none;
     width: 100vw;
     top: 50px;
-    position: fixed;
+    position: absolute;
     transform: translateX(1500px);
     transition: all 2s ease;
-    border: 2px solid black;
-    border-radius: 5px;
 }
 
-input[type="checkbox"]:checked + .menu-mobile ul {
-    transform: translateX(90px);
+input[type="checkbox"]:checked ~ .burger-menu {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .burger-menu-cross {
+    display: block;
+    position: relative;
+    float: right;
+}
+
+input[type="checkbox"]:checked ~ .menu-mobile ul {
+    transform: translateX(-16px);
 }
 
 .menu-mobile li {
+    font-size: 16px;
     width: 100vw;
     height: 40px;
-    background: linear-gradient(to right, rgb(1, 14, 126), rgb(85, 109, 216));
+    background-color: #0000EC;
 }
 
 .menu-mobile a {
@@ -62,9 +77,9 @@ input[type="checkbox"]:checked + .menu-mobile ul {
 
 .main-title {
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 39px;
-    font-weight: 600;
-    padding: 0 16px;
+    font-size: 36px;
+    font-weight: 500;
+    padding: 0 5vw;
 }
 
 .main-title .em-1 {
@@ -74,10 +89,11 @@ input[type="checkbox"]:checked + .menu-mobile ul {
 
 .section-1 p {
     width: 100vw;
-    padding: 0 16px;
+    padding: 0 5vw;
     font-size: 14px;
     margin-top: 10px;
     margin-bottom: 25px;
+    text-align: justify;
 }
 
 .section-1 .p2 {
@@ -89,6 +105,7 @@ input[type="checkbox"]:checked + .menu-mobile ul {
     height: 48px;
     background-color: #00f3bb;
     text-decoration: none;
+    font-size: 18px;
     color: black;
     text-align: center;
     margin: auto;
@@ -96,6 +113,11 @@ input[type="checkbox"]:checked + .menu-mobile ul {
     flex-direction: column;
     justify-content: center;
     margin-bottom: 24px;
+}
+
+.section-1 .button:hover {
+    background: linear-gradient(to left, #0000ff, #00f3bb);
+    color: white;
 }
 
 .clip {
@@ -108,24 +130,152 @@ input[type="checkbox"]:checked + .menu-mobile ul {
 .section-2 h2 {
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 36px;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     padding-top: 64px;
-    margin-left: 16px;
+    padding-bottom: 21px;
+    margin-left: 5vw;
 }
 
 .section-2 .iframe {
-    padding-top: 21px;
-    margin-left: 11px;
-    width: 298px;    
+    margin-left: 3vw;
+    width: 94vw;    
 }
 
+.section-3 .transparency-phone {
+    height: 519px;
+    width: 100vw;
+    position: absolute;
+    top: 1455px;
+}
+
+.section-3 h2 {
+    padding: 450.5px 5vw 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.section-3 p {
+    width: 100vw;
+    padding: 0 5vw;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.section-4 h2 {
+    padding: 54px 5vw 14px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.section-4 .photos-container {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 1458px;
+    flex-direction: column;
+}
+
+.section-4 .wphoto {
+    height: 243px;
+    width: 100vw;
+}
+
+.section-5 h2 {
+    padding: 48px 5vw 37px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.section-5 p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.section-5 img {
+    height: 104px;
+}
+
+.section-5 .themes-container {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    width: 100vw;
+    height: 740px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.section-5 .icon {
+    display: inline-flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    height: 149px;   
+}
+
+.second-clip {
+    margin-top: 42px;
+    width: 100vw;
+    height: 341px;
+    background: linear-gradient(to bottom,  #0000ff, #0000A3);
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.section-6 h2 {
+    padding: 64px 5vw 36px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
+
+.section-6 .button {
+    width: 288px;
+    height: 48px;
+    background-color: #00f3bb;
+    text-decoration: none;
+    font-size: 16px;
+    color: black;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-6 .button:hover {
+    background: linear-gradient(to left, #0000ff, #00f3bb);
+    color: white;
+}
+
+footer p {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    width: 100vw;
+    text-align: center;
+}
+
+footer .media-icons {
+    margin-left: 14.06vw;
+    display: flex;
+    width: 71.88vw;
+    justify-content: space-between;
+    margin-bottom: 31px;
+}
 
 
 @media screen and (min-width: 1024px) {
     header {
         height: 80px;
-        padding: 22px 100px;
+        padding: 22px 6.94vw 120px;
         width: 100vw;
     }
 
@@ -136,7 +286,7 @@ input[type="checkbox"]:checked + .menu-mobile ul {
 
     .menu-desktop {
         margin-top: 4px;
-        width: 40%;
+        width: 45%;
         display: block;
         position: relative;
         float: right;
@@ -149,13 +299,21 @@ input[type="checkbox"]:checked + .menu-mobile ul {
     }
 
     .menu-desktop a {
+        font-size: 16px;
         text-decoration: none;
         color: black;
         transition: color 0.5s linear;
     }
 
     .menu-desktop a:hover {
-        color: blue;
+        color: #00f3bb;
+        text-decoration: line-through;
+    }
+
+    .menu-desktop a:active {
+        text-decoration: line-through;
+        color: #060a24;
+        opacity: 56%;
     }
     
     .burger-menu{
@@ -163,9 +321,9 @@ input[type="checkbox"]:checked + .menu-mobile ul {
     }
 
     .main-title {
-        padding-left: 200px;
+        padding-left: 13.88vw;
         font-size: 64px;
-        font-weight: 600;
+        font-weight: 500;
     }
 
     .main-title .em-2 {
@@ -178,10 +336,10 @@ input[type="checkbox"]:checked + .menu-mobile ul {
     }
 
     .section-1 p {
-        padding-left: 200px;
+        padding-left: 13.88vw;
         padding-right: 0;
         font-size: 16px;
-        width: 820px;
+        width: 56.94vw;
         margin-top: 0px;
         margin-bottom: 56px;
     }
@@ -195,7 +353,7 @@ input[type="checkbox"]:checked + .menu-mobile ul {
         width: 226px;
         height: 56px;
         margin: 0;
-        margin-left: 200px;
+        margin-left: 13.88vw;
         margin-bottom: 5px;
         text-align: center;
         display: flex;
@@ -211,16 +369,127 @@ input[type="checkbox"]:checked + .menu-mobile ul {
         font-family: 'IBM Plex Sans', sans-serif;
         font-size: 48px;
         padding-top: 186px;
-        margin-left: 200px;
+        margin-left: 13.88vw;
+    }
+
+    .section-2 .iframes {
+        display: inline-flex;
+        flex-wrap: wrap;
+        width: 100vw;
+        height: 536px;
+        padding: 10px 5vw;
+        flex-direction: row;
+        justify-content: space-around;
     }
     
-    /*
-    Seguir con flex o algo para ubicar de a 2 iframes en fila
     .section-2 .iframe {
         padding-top: 26px;
         margin-left: 0px;
-        width: 584px;    
+        width: 40vw;    
     }
-    */
+
+    
+    .section-3 .transparency-phone {
+        height: 660px;
+        width: 31.77vw;
+        top: 1250px;
+        left: 13.88vw;
+    }
+
+    .section-3 h2 {
+        position: absolute;
+        top: 1420px;
+        left: 50vw;
+        padding: 0;
+        font-size: 48px;
+        font-weight: 500;
+    }
+
+    .section-3 p {
+        position: absolute;
+        top: 1510px;
+        left: 50vw;
+        height: 408px;
+        width: 464px;
+        padding: 0;
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    .section-4 h2 {
+        padding: 554.4px 13.88vw 36px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 48px;
+        font-weight: 500;
+    }
+    
+    .section-4 .photos-container {
+        display: inline-flex;
+        flex-wrap: wrap;
+        height: 728px;
+        flex-direction: row;
+    }
+    
+    .section-4 .wphoto {
+        height: 364px;
+        width: 33.33vw;
+    }
+
+    .section-5 h2 {
+        padding: 64px 13.88vw 56px;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 48px;
+        font-weight: 500;
+    }
+    
+    .section-5 .themes-container {
+        margin-left: 13.88vw;
+        width: 72.24vw;
+        height: 210px;
+        flex-direction: row;
+    }
+    
+    .section-5 .icon { 
+        justify-content: space-around;
+        height: 210px;
+        width: 15.9vw;   
+    }
+    
+    .second-clip {
+        margin-top: 34px;
+        height: 518px;
+        background: linear-gradient(to left,  #0000ff, #0000A3);
+        clip-path: polygon(0 25%, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .section-6 h2 {
+        padding: 213px 13.88vw 36px;
+        font-size: 48px;
+    }
+    
+    .section-6 .button {
+        width: 345px;
+        height: 56px;
+        font-size: 18px;
+    }
+
+    footer p {
+        margin-top: 36px;
+        margin-left: 6.94vw;
+        font-size: 16px;
+        text-align: justify;
+        width: 50vw;
+    }
+
+    footer .media-icons {
+        position: relative;
+        float: right;
+        bottom: 43px;
+        margin-left: 0;
+        margin-right: 6.94vw;
+        width: 16.25vw;
+        margin-bottom: 0;
+    }
+
 }
 
