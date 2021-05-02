@@ -36,12 +36,15 @@ header {
 }
 
 .menu-mobile ul {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .menu-mobile ul {
+    display: block;
+    position: absolute;
     list-style-type: none;
     width: 100vw;
-    top: 50px;
-    position: absolute;
-    transform: translateX(1500px);
-    transition: all 2s ease;
+    top: 55px;
 }
 
 input[type="checkbox"]:checked ~ .burger-menu {
@@ -61,7 +64,8 @@ input[type="checkbox"]:checked ~ .menu-mobile ul {
 .menu-mobile li {
     font-size: 16px;
     width: 100vw;
-    height: 40px;
+    height: 50px;
+    padding: 16px;
     background-color: #0000EC;
 }
 
@@ -139,7 +143,10 @@ input[type="checkbox"]:checked ~ .menu-mobile ul {
 
 .section-2 .iframe {
     margin-left: 3vw;
-    width: 94vw;    
+    width: 94vw;
+    height: 232px;
+    border: 0;
+    background-color: transparent;
 }
 
 .section-3 .transparency-phone {
